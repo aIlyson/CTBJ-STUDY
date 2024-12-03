@@ -1,6 +1,3 @@
-Aqui está a versão formatada no estilo Markdown para o README:
-
-```markdown
 # Projeto de Catálogo Digital Educacional
 
 Este repositório contém o código para um catálogo digital educacional com foco em materiais de Matemática, Física e Química, além de quizzes e recursos para auxiliar alunos com dificuldades nas disciplinas.

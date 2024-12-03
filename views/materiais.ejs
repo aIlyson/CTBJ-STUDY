@@ -9,22 +9,84 @@
     </title>
     <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
     <link rel="stylesheet" href="/css/materiais.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
     <%- include('components/nav') %>
 
-        <div class="container">
-            <h1>Materiais Complementares</h1>
-            <h2>Quizzes</h2>
+        <main class="main-content">
+            <h1 class="page-title">Materiais Complementares</h1>
+
+            <!-- livros -->
+            <section id="pdfs" class="material-section">
+                <h2 class="section-title">PDFs Educacionais</h2>
+
+                <div class="nivel" id="nivel-basico">
+                    <h3 class="nivel-title">Básico</h3>
+                    <ul class="pdf-list">
+                        <li><a href="/pdf/trigonometria-matematica.pdf" target="_blank">Trigonometria - Matemática (1º
+                                Semestre)</a></li>
+                        <li><a href="/pdf/sistemaseGrandeza-matematica.pdf" target="_blank">Sistemas e Grandezas -
+                                Matemática (2º Semestre)</a></li>
+                        <li><a href="/pdf/fisica-fundamentos.pdf" target="_blank">Matéria e Energia - Física (1º
+                                Semestre)</a></li>
+                        <li><a href="/pdf/humanidadeeAmbiente-quimica.pdf" target="_blank">Humanidade e Ambiente -
+                                Química (1º Semestre)</a></li>
+                    </ul>
+                </div>
+
+                <div class="nivel" id="nivel-intermediario">
+                    <h3 class="nivel-title">Intermediário</h3>
+                    <ul class="pdf-list">
+                        <li><a href="/pdf/matematica-intermediario.pdf" target="_blank">Cálculo I - Matemática</a></li>
+                        <li><a href="/pdf/mecanica-classica.pdf" target="_blank">Mecânica Clássica - Física</a></li>
+                        <li><a href="/pdf/quimica-intermediario.pdf" target="_blank">Química Intermediária</a></li>
+                    </ul>
+                </div>
+
+                <div class="nivel" id="nivel-avancado">
+                    <h3 class="nivel-title">Avançado</h3>
+                    <ul class="pdf-list">
+                        <li><a href="/pdf/matematica-avancado.pdf" target="_blank">Cálculo II - Matemática</a></li>
+                        <li><a href="/pdf/quantum-physics.pdf" target="_blank">Física Quântica - Física</a></li>
+                        <li><a href="/pdf/quimica-avancada.pdf" target="_blank">Química Avançada</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- exercícios -->
+            <section id="exercicios" class="material-section">
+                <h2 class="section-title">Exercícios Educacionais</h2>
+                <p>Esta seção contém links para ajudá-lo a melhorar seu aprendizado. Escolha um e comece a treinar!
+                </p>
+
+                <div class="exercicio">
+                    <i class="bi bi-pencil-square"></i>
+                    <a href="https://www.somatematica.com.br/quiz" target="_blank">Exercícios de Matemática - Níveis de
+                        Dificuldade</a>
+                </div>
+            </section>
+
             <!-- quizzes -->
+            <section id="quizzes" class="material-section">
+                <h2 class="section-title">Quizzes Educacionais</h2>
+                <p>Teste seus conhecimentos com nosso quiz interativo! Selecione seu projeto e nível de dificuldade para
+                    ver seu progresso.</p>
 
-            <h2>Links Confiáveis</h2>
-            <!-- lista de links -->
+                <div class="quiz">
+                    <i class="bi bi-question-circle"></i>
+                    <a href="https://www.quiz.com.br/quizzes/quimica" target="_blank">Quiz sobre Química - Ligações
+                        Químicas</a>
+                </div>
+                <div class="quiz">
+                    <i class="bi bi-question-circle"></i>
+                    <a href="https://www.somatematica.com.br/jogos/quiz" target="_blank">Quiz de Matemática - Operações
+                        Básicas</a>
+                </div>
+            </section>
 
-            <h2>PDFs Educacionais</h2>
-            <!-- PDFs -->
-        </div>
+        </main>
 
         <%- include('components/footer') %>
 </body>

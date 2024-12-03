@@ -1,14 +1,8 @@
 @import url("/css/styles.css");
 
-
-/* Main Title */
-.main-title {
-    text-align: center;
-    font-size: 36px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    color: #333;
-    font-weight: bold;
+.main-content {
+    margin: auto;
+    padding: 20px;
 }
 
 /* livros */
@@ -19,18 +13,18 @@
     padding: 0 15px;
 }
 
-/* livro Card */
+/* livro card */
 .livro {
+    background-color: #fff;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-bottom: 30px;
     padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     align-items: center;
     transition: transform 0.3s ease;
-    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .livro:hover {
@@ -50,22 +44,22 @@
 }
 
 .livro-titulo {
-    font-size: 24px;
     color: #333;
-    margin-bottom: 10px;
+    font-size: 24px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .livro-semestre {
-    font-size: 16px;
     color: #777;
+    font-size: 16px;
     margin-bottom: 15px;
 }
 
 .livro-pdf {
+    color: #007bff;
     display: inline-block;
     font-size: 18px;
-    color: #007bff;
     text-decoration: none;
     padding: 8px 15px;
     border: 2px solid #007bff;

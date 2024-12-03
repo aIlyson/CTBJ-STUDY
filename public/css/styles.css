@@ -172,48 +172,14 @@ h2 {
     box-shadow: -4px 4px 0 rgb(107, 99, 255, 0.3);
 }
 
-/* container */
-.container {
-    background-color: var(--white);
-    max-width: 1200px;
+/* titulo */
+.page-title {
+    color: #333;
+    font-size: 2.25rem;
     text-align: center;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.container h1 {
-    color: var(--roxo);
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-}
-
-.container p {
-    color: var(--texto);
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.container ul {
-    list-style: none;
-    padding: 0;
-}
-
-.container ul li {
-    margin: 10px 0;
-}
-
-.container ul li a {
-    color: var(--roxo);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.container ul li a:hover {
-    color: var(--azul-hover);
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 /* footer */

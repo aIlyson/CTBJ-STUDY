@@ -23,6 +23,11 @@ Para clonar o repositório e começar a trabalhar no projeto, siga os passos aba
    npm install
    ```
 
+4. **Instale o servidor Express:
+   ```bash
+   npm install express
+   ```
+   
 4. **Instale o EJS** (caso ainda não tenha sido instalado):
    ```bash
    npm install ejs
@@ -48,7 +53,7 @@ O servidor foi construído usando Express. Para iniciar o servidor localmente, s
 
 ### 3. Estrutura do Projeto
 
-- **/src**: Contém os arquivos principais do código, incluindo as rotas, controladores e templates.
+- **/routes**: Contém os arquivos principais do código, incluindo as rotas, controladores e templates.
 - **/public**: Arquivos estáticos como imagens, CSS, PDF e JavaScript.
 - **/views**: Arquivos de templates para renderizar as páginas HTML usando o EJS.
 

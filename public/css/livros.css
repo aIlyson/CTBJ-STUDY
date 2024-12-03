@@ -1,0 +1,83 @@
+@import url("/css/styles.css");
+
+
+/* Main Title */
+.main-title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* livros */
+.livros-section {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+
+/* livro Card */
+.livro {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-items: center;
+    transition: transform 0.3s ease;
+    justify-content: center;
+}
+
+.livro:hover {
+    transform: scale(1.02);
+}
+
+.livro-img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.livro-info {
+    flex-grow: 1;
+}
+
+.livro-titulo {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.livro-semestre {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.livro-pdf {
+    display: inline-block;
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.livro-pdf:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.livro-pdf i {
+    margin-right: 8px;
+}

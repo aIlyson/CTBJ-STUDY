@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('components/nav') %>
+
+        <main>
+            <section class="hero">
+                <div class="diagonal-hero-bg">
+                    <div class="stars">
+                        <div class="small"></div>
+                        <div class="medium"></div>
+                        <div class="big"></div>
+                    </div>
+                </div>
+
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h1>Para todos os alunos, <br> o aprendizado começa aqui</h1>
+                        <p>O CTBJ STUDY é a plataforma ideal para ajudá-lo a aprender de forma prática e eficiente.
+                            Navegue por livros didáticos, materiais complementares, e aproveite os recursos interativos
+                            para um aprendizado contínuo e dinâmico.</p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="/images/estudo.jpg" alt="Imagem de aprendizado" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- sobre o sistema -->
+            <section class="about-system">
+                <h2>Sobre o Sistema</h2>
+                <p>CTBJ STUDY é a melhor plataforma para ajudá-lo a estudar de forma eficaz e eficiente. Navegue por
+                    livros didáticos, materiais complementares e use recursos interativos para um aprendizado contínuo e
+                    dinâmico.</p>
+            </section>
+
+            <!-- tabs funcionalidades -->
+            <section class="features">
+                <div class="tabs">
+                    <ul class="tab-titles">
+                        <li class="tab-title active" data-tab="tab-1">Livros Didáticos</li>
+                        <li class="tab-title" data-tab="tab-2">Materiais Complementares</li>
+                        <li class="tab-title" data-tab="tab-3">E Mais</li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab-1">
+                            <div class="tab-summary">
+                                <ul>
+                                    <li>Livros essenciais para o aprendizado de Matemática, Física e Química.</li>
+                                    <li>Conteúdos organizados por disciplina.</li>
+                                    <li>Acesso rápido aos materiais.</li>
+                                </ul>
+                                <a href="/materiais" class="btn button-perspective">Comece a Estudar</a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="/images/ufpi.jpg" alt="Livros Didáticos" />
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="tab-2">
+                            <div class="tab-summary">
+                                <ul>
+                                    <li>Quizzes interativos para reforçar o aprendizado.</li>
+                                    <li>Links úteis e PDFs complementares.</li>
+                                    <li>Conteúdo adicional para aprofundamento.</li>
+                                </ul>
+                                <a href="/materiais" class="btn button-perspective">Comece a Estudar</a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="/images/ufpi.jpg" alt="Livros Didáticos" />
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="tab-3">
+                            <div class="tab-summary">
+                                <ul>
+                                    <li>Recursos adicionais para otimizar o aprendizado.</li>
+                                    <li>Dicas de estudo e fórmulas essenciais.</li>
+                                    <li>Materiais extras para estudo avançado.</li>
+                                </ul>
+                                <a href="/materiais" class="btn button-perspective">Comece a Estudar</a>
+                            </div>
+                            <div class="tab-image">
+                                <img src="/images/ufpi.jpg" alt="Livros Didáticos" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- nivel de dificuldade -->
+            <section class="difficulty-levels">
+                <h2>Filtros por Nível de Dificuldade</h2>
+                <p>Escolha o nível de dificuldade que melhor se adapta aos seus conhecimentos e objetivos de estudo.
+                    Cada nível oferece materiais específicos para ajudá-lo a avançar de forma gradual, do básico ao
+                    avançado.</p>
+                <div class="level-buttons">
+                    <a href="/nivel/basico" class="btn level-btn">Básico</a>
+                    <a href="/nivel/intermediario" class="btn level-btn">Intermediário</a>
+                    <a href="/nivel/avancado" class="btn level-btn">Avançado</a>
+                </div>
+            </section>
+
+            <!-- ultimas dicas -->
+            <section class="latest-tips">
+                <h2>Últimas Dicas</h2>
+                <div class="tip-cards">
+                    <div class="tip-card">
+                        <img src="/images/ufpi.jpg" alt="Dica 1" class="tip-image">
+                        <h3>Dica de Estudo 1</h3>
+                        <p>Cillum consectetur do eiusmod magna consectetur ad. Veniam laboris fugiat culpa sunt ad sit
+                            qui cillum sint cupidatat deserunt. Duis nulla in consectetur ea minim nostrud dolore.
+                            Labore eu ut cillum nulla. Do aute ea esse mollit ea proident laboris velit qui.</p>
+                    </div>
+                    <div class="tip-card">
+                        <img src="/images/ufpi.jpg" alt="Dica 2" class="tip-image">
+                        <h3>Dica de Estudo 2</h3>
+                        <p>Cillum consectetur do eiusmod magna consectetur ad. Veniam laboris fugiat culpa sunt ad sit
+                            qui cillum sint cupidatat deserunt. Duis nulla in consectetur ea minim nostrud dolore.
+                            Labore eu ut cillum nulla. Do aute ea esse mollit ea proident laboris velit qui.</p>
+                    </div>
+                    <div class="tip-card">
+                        <img src="/images/ufpi.jpg" alt="Dica 3" class="tip-image">
+                        <h3>Dica de Estudo 3</h3>
+                        <p>Cillum consectetur do eiusmod magna consectetur ad. Veniam laboris fugiat culpa sunt ad sit
+                            qui cillum sint cupidatat deserunt. Duis nulla in consectetur ea minim nostrud dolore.
+                            Labore eu ut cillum nulla. Do aute ea esse mollit ea proident laboris velit qui.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <%- include('components/footer') %>
+
+            <script src="/js/main.js"></script>
+</body>
+
+</html>

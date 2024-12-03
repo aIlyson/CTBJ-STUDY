@@ -1,0 +1,232 @@
+:root {
+    --white: #ffffff;
+    --roxo: #6c63ff;
+    --roxo-claro: #b39ddb;
+    --azul-pastel: #dbe4ff;
+    --cinza: #f4f4f9;
+    --texto: #333333;
+    --azul-hover: #5050c7;
+    --light-gray: #f4f4f4;
+    --hover-gray: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f7;
+    color: var(--texto);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+main {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: var(--roxo);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* nav */
+.side-nav {
+    background-color: #f5f5f7;
+    color: var(--roxo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.nav-link i,
+.dropdown-menu a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.dropdown-menu a:hover i {
+    color: var(--roxo);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.divider {
+    background-color: var(--roxo);
+    width: 2px;
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    color: var(--roxo);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: var(--roxo);
+    color: var(--white);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: var(--white);
+    color: var(--roxo);
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.dropdown-menu a {
+    color: var(--roxo);
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover, i:hover {
+    background-color: var(--roxo);
+    color: var(--white);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.contact-link {
+    background-color: var(--roxo);
+    color: var(--white);
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition: all .15s linear 0s;
+    box-shadow: -4px 4px 0 rgb(107, 99, 255, 0.3);
+}
+
+/* container */
+.container {
+    background-color: var(--white);
+    max-width: 1200px;
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    color: var(--roxo);
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.container p {
+    color: var(--texto);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin: 10px 0;
+}
+
+.container ul li a {
+    color: var(--roxo);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.container ul li a:hover {
+    color: var(--azul-hover);
+}
+
+/* footer */
+footer {
+    background-color: var(--roxo);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 10px 0;
+}

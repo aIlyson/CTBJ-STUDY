@@ -1,0 +1,426 @@
+@import url("/css/styles.css");
+
+/* hero */
+.hero {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.diagonal-hero-bg {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #6b63ff;
+    background: -webkit-linear-gradient(to right, #6b63ff, #857ff8);
+    background: linear-gradient(to right, #6b63ff, #857ff8);
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.stars {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.stars>.small {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow:
+        300px 300px #767676,
+        500px 800px #767676,
+        1500px 1200px #767676,
+        700px 100px #767676,
+        1000px 2000px #767676;
+    animation: starsAnimation 50s linear infinite;
+}
+
+.stars>.small::after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow:
+        300px 300px #767676,
+        500px 800px #767676,
+        1500px 1200px #767676,
+        700px 100px #767676,
+        1000px 2000px #767676;
+}
+
+.stars>.medium {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow:
+        300px 300px #767676,
+        500px 800px #767676,
+        1500px 1200px #767676,
+        700px 100px #767676,
+        1000px 2000px #767676;
+    animation: starsAnimation 100s linear infinite;
+}
+
+.stars>.medium::after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow:
+        300px 300px #767676,
+        500px 800px #767676,
+        1500px 1200px #767676,
+        700px 100px #767676,
+        1000px 2000px #767676;
+}
+
+.stars>.big {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow:
+        300px 300px #767676,
+        500px 800px #767676,
+        1500px 1200px #767676,
+        700px 100px #767676,
+        1000px 2000px #767676;
+    border-radius: 100%;
+    animation: starsAnimation 150s linear infinite;
+}
+
+.stars>.big::after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow:
+        300px 300px #767676,
+        500px 800px #767676,
+        1500px 1200px #767676,
+        700px 100px #767676,
+        1000px 2000px #767676;
+    border-radius: 100%;
+}
+
+@keyframes starsAnimation {
+    from {
+        transform: translateY(-2000px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+/* introdução */
+.intro-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px 20px;
+    z-index: 1;
+}
+
+.intro-text {
+    max-width: 700px;
+    margin-right: 20px;
+}
+
+.intro-text h1 {
+    color: #fff;
+    font-size: 2.9rem;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.intro-image img {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+/* sobre */
+.about-system {
+    width: 60%;
+    background-color: var(--light-gray);
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-system p {
+    font-size: 1.3rem;
+}
+
+/* tabs */
+.tabs {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 40px 20px;
+}
+
+.tab-titles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.tab-title {
+    background-color: transparent;
+    color: #2d3f53;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-title.active {
+    border-bottom: 5px solid var(--roxo);
+    border-radius: 7px;
+}
+
+.tab-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-pane {
+    display: none;
+    width: 45%;
+    flex-basis: 45%;
+}
+
+.tab-pane.active {
+    display: flex;
+}
+
+.tab-summary {
+    width: 60%;
+}
+
+.tab-summary ul {
+    list-style-type: disc;
+    list-style: inside;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.tab-summary ul li {
+    color: #2D3F53;
+    font-size: 1.1rem;
+    text-align: left;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.tab-summary .btn {
+    width: 100%;
+    max-width: 460px;
+    background-color: var(--roxo);
+    color: #fff;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.75rem;
+    cursor: pointer;
+    border: 0 solid var(--azul-hover);
+    padding: .75rem 1.65rem;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab-summary .btn:focus {
+    outline: 0;
+}
+
+.tab-summary .btn:after {
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    transition: all 0.3s ease;
+}
+
+.tab-summary .btn:hover {
+    transform: rotate(2deg) scale(1.05);
+}
+
+.tab-summary .btn:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+
+.tab-summary .btn:active {
+    transform: rotate(0deg) scale(1);
+}
+
+.tab-image {
+    width: 35%;
+    margin-left: 30px;
+}
+
+.tab-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* nivel */
+.difficulty-levels {
+    background-color: var(--light-gray);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-levels h2 {
+    color: var(--roxo);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.difficulty-levels p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.level-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.level-btn {
+    background-color: var(--azul-pastel);
+    color: var(--roxo);
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.level-btn:hover {
+    background-color: var(--roxo);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.level-btn:active {
+    transform: translateY(1px);
+}
+
+/* dicas */
+.latest-tips {
+    background-color: var(--light-gray);
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.latest-tips h2 {
+    color: var(--roxo);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tip-cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tip-card {
+    background-color: #fff;
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tip-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--roxo);
+    font-weight: 600;
+}
+
+.tip-card .tip-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    height: 180px;
+}
+
+.tip-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}

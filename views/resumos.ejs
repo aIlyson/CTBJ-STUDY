@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
     <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
-    <link rel="stylesheet" href="/css/resumos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="/css/resumos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <%- include('components/nav') %>
 
     <main class="main-content">
-        <h1 class="page-title">Resumos e Fórmulas</h1>
+      <h1 class="page-title">Resumos e Fórmulas</h1>
 
-        <section class="section">
-            <h2 class="section-title">Fórmulas de Matemática</h2>
-            <p class="section-description">Confira abaixo algumas das fórmulas mais importantes para o estudo da Matemática:</p>
-            <ul class="formula-list">
-                <li><strong>Teorema de Pitágoras:</strong> a² + b² = c²</li>
-                <li><strong>Fórmula da Bhaskara:</strong> x = (-b ± √(b² - 4ac)) / 2a</li>
-                <!-- mais fórmulas aqui -->
-            </ul>
-        </section>
+      <section class="section">
+        <h2 class="section-title">Fórmulas de Matemática</h2>
+        <p class="section-description">
+          Confira abaixo algumas das fórmulas mais importantes para o estudo da
+          Matemática:
+        </p>
+        <ul class="formula-list">
+          <li><strong>Teorema de Pitágoras:</strong> a² + b² = c²</li>
+          <li>
+            <strong>Fórmula da Bhaskara:</strong> x = (-b ± √(b² - 4ac)) / 2a
+          </li>
+          <!-- mais fórmulas aqui -->
+        </ul>
+      </section>
 
-        <section class="section">
-            <h2 class="section-title">Fórmulas de Física</h2>
-            <p class="section-description">Aqui estão algumas fórmulas fundamentais para o estudo da Física:</p>
-            <ul class="formula-list">
-                <li><strong>Lei de Newton:</strong> F = ma</li>
-                <li><strong>Equação da Cinemática:</strong> v = u + at</li>
-                <!-- mais fórmulas aqui -->
-            </ul>
-        </section>
+      <section class="section">
+        <h2 class="section-title">Fórmulas de Física</h2>
+        <p class="section-description">
+          Aqui estão algumas fórmulas fundamentais para o estudo da Física:
+        </p>
+        <ul class="formula-list">
+          <li><strong>Lei de Newton:</strong> F = ma</li>
+          <li><strong>Equação da Cinemática:</strong> v = u + at</li>
+          <!-- mais fórmulas aqui -->
+        </ul>
+      </section>
 
-        <section class="section">
-            <h2 class="section-title">Fórmulas de Química</h2>
-            <p class="section-description">Veja algumas das fórmulas essenciais para a Química:</p>
-            <ul class="formula-list">
-                <li><strong>Lei dos Gases Ideais:</strong> PV = nRT</li>
-                <li><strong>Equação de Arrhenius:</strong> k = Ae^(-Ea/RT)</li>
-                <!-- mais fórmulas aqui -->
-            </ul>
-        </section>
-
+      <section class="section">
+        <h2 class="section-title">Fórmulas de Química</h2>
+        <p class="section-description">
+          Veja algumas das fórmulas essenciais para a Química:
+        </p>
+        <ul class="formula-list">
+          <li><strong>Lei dos Gases Ideais:</strong> PV = nRT</li>
+          <li><strong>Equação de Arrhenius:</strong> k = Ae^(-Ea/RT)</li>
+          <!-- mais fórmulas aqui -->
+        </ul>
+      </section>
     </main>
 
     <%- include('components/footer') %>
-</body>
-
+  </body>
 </html>

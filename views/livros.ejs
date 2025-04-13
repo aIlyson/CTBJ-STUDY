@@ -1,94 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
-    <link rel="stylesheet" href="/css/livros.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <%- include('components/nav') %>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
+  <link rel="stylesheet" href="/css/livros.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+
+<body>
+  <%- include('components/nav') %>
 
     <main class="main-content">
-      <h1 class="page-title">Catálogo de Livros</h1>
+      <h1 class="page-title">
+        <%= title.toUpperCase() %>
+      </h1>
 
       <!-- matemática -->
-      <section id="matematica" class="livros-section">
-        <h2>Matemática</h2>
-        <div class="livro">
-          <img
-            src="/images/trigonometria.png"
-            alt="Livro de Matemática 1"
-            class="livro-img"
-          />
-          <div class="livro-info">
-            <h3 class="livro-titulo">Trigonometria</h3>
-            <p class="livro-semestre">Semestre: 1º</p>
-            <a href="/pdf/trigonometria-matematica.pdf" class="livro-pdf">
-              <i class="bi bi-file-earmark-pdf"></i> Baixar PDF
-            </a>
-          </div>
-        </div>
+      <% const livrosMatematica=[ { titulo: "Trigonometria" , semestre: "1º" , imagem: "/images/trigonometria.png" ,
+        pdf: "/pdf/trigonometria-matematica.pdf" }, { titulo: "Sistemas e Grandezas" , semestre: "2º" ,
+        imagem: "/images/sistemaseGrandeza.png" , pdf: "/pdf/sistemaseGrandezas-matematica.pdf" }, {
+        titulo: "Estatística Básica" , semestre: "3º" , imagem: "/images/estatistica.png" ,
+        pdf: "/pdf/estatistica_basica.pdf" }, ]; %>
 
-        <div class="livro">
-          <img
-            src="/images/sistemaseGrandeza.png"
-            alt="Livro de Matemática 2"
-            class="livro-img"
-          />
-          <div class="livro-info">
-            <h3 class="livro-titulo">Sistemas e Grandezas</h3>
-            <p class="livro-semestre">Semestre: 2º</p>
-            <a href="/pdf/sistemaseGrandezas-matematica.pdf" class="livro-pdf">
-              <i class="bi bi-file-earmark-pdf"></i> Baixar PDF
-            </a>
-          </div>
-        </div>
-      </section>
+        <section id="matematica" class="livros-section">
+          <h2>Matemática</h2>
+          <% livrosMatematica.forEach(livro=> { %>
+            <div class="livro">
+              <img src="<%= livro.imagem %>" alt="Livro de <%= livro.titulo %>" class="livro-img" />
+              <div class="livro-info">
+                <h3 class="livro-titulo">
+                  <%= livro.titulo %>
+                </h3>
+                <p class="livro-semestre">Semestre: <%= livro.semestre %>
+                </p>
+                <a href="<%= livro.pdf %>" class="livro-pdf">
+                  <i class="bi bi-file-earmark-pdf"></i> Baixar PDF
+                </a>
+              </div>
+            </div>
+            <% }); %>
+        </section>
 
-      <!-- física e química -->
-      <section id="fisica-quimica" class="livros-section">
-        <h2>Física e Química</h2>
-        <div class="livro">
-          <img
-            src="/images/materiaeEnergia.png"
-            alt="Livro de Física 1"
-            class="livro-img"
-          />
-          <div class="livro-info">
-            <h3 class="livro-titulo">Matéria e Energia</h3>
-            <p class="livro-semestre">Semestre: 1º</p>
-            <a href="/pdf/humanidadeeAmbiente-quimica.pdf" class="livro-pdf">
-              <i class="bi bi-file-earmark-pdf"></i> Baixar PDF
-            </a>
-          </div>
-        </div>
+        <!-- física e química -->
+        <% const livrosFQ=[ { titulo: "Matéria e Energia" , semestre: "1º" , imagem: "/images/materiaeEnergia.png" ,
+          pdf: "/pdf/materiaeEnergia-fisica.pdf" }, { titulo: "Humanidade e Ambiente" , semestre: "1º" ,
+          imagem: "/images/humanidadeeAmbiente.png" , pdf: "/pdf/humanidadeeAmbiente-quimica.pdf" }, {
+          titulo: "Físico-Química Experimental" , semestre: "2º" , imagem: "/images/experimentos.png" ,
+          pdf: "/pdf/experimentos_fisico_quimica.pdf" } ]; %>
 
-        <div class="livro">
-          <img
-            src="/images/humanidadeeAmbiente.png"
-            alt="Livro de Química 1"
-            class="livro-img"
-          />
-          <div class="livro-info">
-            <h3 class="livro-titulo">Humanidade e Ambiente</h3>
-            <p class="livro-semestre">Semestre: 1º</p>
-            <a href="/pdf/materiaeEnergia-fisica.pdf" class="livro-pdf">
-              <i class="bi bi-file-earmark-pdf"></i> Baixar PDF
-            </a>
-          </div>
-        </div>
-      </section>
+          <section id="fisica-quimica" class="livros-section">
+            <h2>Física e Química</h2>
+            <% livrosFQ.forEach(livro=> { %>
+              <div class="livro">
+                <img src="<%= livro.imagem %>" alt="Livro de <%= livro.titulo %>" class="livro-img" />
+                <div class="livro-info">
+                  <h3 class="livro-titulo">
+                    <%= livro.titulo %>
+                  </h3>
+                  <p class="livro-semestre">Semestre: <%= livro.semestre %>
+                  </p>
+                  <a href="<%= livro.pdf %>" class="livro-pdf">
+                    <i class="bi bi-file-earmark-pdf"></i> Baixar PDF
+                  </a>
+                </div>
+              </div>
+              <% }); %>
+          </section>
+
+          <!-- português -->
+          <% const livrosPortugues=[ { titulo: "Interpretação de Textos" , semestre: "1º" ,
+            imagem: "/images/interpretacao.png" , pdf: "/pdf/interpretacao_textos.pdf" }, {
+            titulo: "Gramática Essencial" , semestre: "2º" , imagem: "/images/gramatica.png" ,
+            pdf: "/pdf/gramatica_essencial.pdf" } ]; %>
+
+            <section id="portugues" class="livros-section">
+              <h2>Português</h2>
+              <% livrosPortugues.forEach(livro=> { %>
+                <div class="livro">
+                  <img src="<%= livro.imagem %>" alt="Livro de <%= livro.titulo %>" class="livro-img" />
+                  <div class="livro-info">
+                    <h3 class="livro-titulo">
+                      <%= livro.titulo %>
+                    </h3>
+                    <p class="livro-semestre">Semestre: <%= livro.semestre %>
+                    </p>
+                    <a href="<%= livro.pdf %>" class="livro-pdf">
+                      <i class="bi bi-file-earmark-pdf"></i> Baixar PDF
+                    </a>
+                  </div>
+                </div>
+                <% }); %>
+            </section>
     </main>
 
     <%- include('components/footer') %>
-    
-    <script src="/js/main.js"></script>
-  </body>
+      <script src="/js/main.js"></script>
+</body>
+
 </html>

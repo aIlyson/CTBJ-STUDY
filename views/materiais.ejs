@@ -16,80 +16,86 @@
   <%- include('components/nav') %>
 
     <main class="main-content">
-      <h1 class="page-title">Materiais Complementares</h1>
+      <h1 class="page-title">
+        <%= title || "Materiais Complementares" %>
+      </h1>
 
-      <!-- livros -->
-      <section id="pdfs" class="material-section">
-        <h2 class="section-title">PDFs Educacionais</h2>
+      <!-- exercicios -->
+      <% const exercicios=[ { titulo: "Exercícios de Matemática - Níveis de Dificuldade" ,
+        link: "/pdf/trigonometria-matematica.pdf" , icone: "bi-pencil-square" }, { titulo: "Física - Movimento Uniforme"
+        , link: "/pdf/exercicios_fisica_mu.pdf" , icone: "bi-lightning" }, { titulo: "Química - Tabela Periódica" ,
+        link: "/pdf/exercicios_quimica_tabela.pdf" , icone: "bi-beaker" }, {
+        titulo: "Português - Interpretação de Texto" , link: "/pdf/exercicios_portugues_interpretacao.pdf" ,
+        icone: "bi-book" } ]; %>
 
-        <div class="nivel" id="nivel-basico">
-          <h3 class="nivel-title">Básico</h3>
-          <ul class="pdf-list">
-            <li>
-              <a href="/pdf/lista_fisica_basico.pdf" target="_blank">Física</a>
-            </li>
-          </ul>
-        </div>
+        <section id="exercicios" class="material-section">
+          <h2 class="section-title">Exercícios Educacionais</h2>
+          <p>Aqui nesta seção estão os links que irão ajudar com seu aprendizado. Selecione um e comece a treinar!</p>
+          <% exercicios.forEach(ex=> { %>
+            <div class="exercicio">
+              <i class="bi <%= ex.icone %>"></i>
+              <a href="<%= ex.link %>" target="_blank">
+                <%= ex.titulo %>
+              </a>
+            </div>
+            <% }) %>
+        </section>
 
-        <div class="nivel" id="nivel-intermediario">
-          <h3 class="nivel-title">Intermediário</h3>
-          <ul class="pdf-list">
-            <li>
-              <a href="/pdf/lista_quimica_intermediario.pdf" target="_blank">Química</a>
-            </li>
-          </ul>
-        </div>
+        <!-- quizzes -->
+        <% const quizzes=[ { titulo: "Quiz sobre Química - Ligações Químicas" ,
+          link: "https://pt.quizur.com/discover?keyword=liga%C3%A7%C3%B5es+qu%C3%ADmicas" }, { titulo: "Questões Gerais"
+          , link: "https://pt.quizur.com/" }, { titulo: "Quiz de Matemática Básica" ,
+          link: "https://pt.quizur.com/discover?keyword=matem%C3%A1tica+b%C3%A1sica" }, {
+          titulo: "Quiz de História do Brasil" , link: "https://pt.quizur.com/discover?keyword=hist%C3%B3ria+do+brasil"
+          } ]; %>
 
-        <div class="nivel" id="nivel-avancado">
-          <h3 class="nivel-title">Avançado</h3>
-          <ul class="pdf-list">
-            <li>
-              <a href="/pdf/lista_quimica_avancado.pdf" target="_blank">Química</a>
-              <!-- + -->
-            </li>
-          </ul>
-        </div>
-      </section>
+          <section id="quizzes" class="material-section">
+            <h2 class="section-title">Quizzes Educacionais</h2>
+            <p>Dê uma testada nos seus conhecimentos no nosso quiz interativo! Escolha seu tema e nível para dar uma
+              vista!
+            </p>
+            <% quizzes.forEach(quiz=> { %>
+              <div class="quiz">
+                <i class="bi bi-question-circle"></i>
+                <a href="<%= quiz.link %>" target="_blank">
+                  <%= quiz.titulo %>
+                </a>
+              </div>
+              <% }) %>
+          </section>
 
-      <!-- exercícios -->
-      <section id="exercicios" class="material-section">
-        <h2 class="section-title">Exercícios Educacionais</h2>
-        <p>
-          Esta seção contém links para ajudá-lo a melhorar seu aprendizado.
-          Escolha um e comece a treinar!
-        </p>
+          <!-- pdfs -->
+          <% const pdfs={ basico: [ { nome: "Física" , link: "/pdf/lista_fisica_basico.pdf" }, { nome: "Matemática" ,
+            link: "/pdf/lista_matematica_basico.pdf" }, { nome: "Português" , link: "/pdf/lista_portugues_basico.pdf" }
+            ], intermediario: [ { nome: "Química" , link: "/pdf/lista_quimica_intermediario.pdf" }, { nome: "Geografia"
+            , link: "/pdf/lista_geografia_intermediario.pdf" }, { nome: "História" ,
+            link: "/pdf/lista_historia_intermediario.pdf" } ], avancado: [ { nome: "Química" ,
+            link: "/pdf/lista_quimica_avancado.pdf" }, { nome: "Física Avançada" ,
+            link: "/pdf/lista_fisica_avancado.pdf" }, { nome: "Matemática Aplicada" ,
+            link: "/pdf/lista_matematica_avancado.pdf" } ] }; %>
 
-        <div class="exercicio">
-          <i class="bi bi-pencil-square"></i>
-          <a href="/pdf/trigonometria-matematica.pdf" target="_blank">Exercícios de Matemática - Níveis de
-            Dificuldade</a>
-          <!-- + -->
-        </div>
-      </section>
-
-      <!-- quizzes -->
-      <section id="quizzes" class="material-section">
-        <h2 class="section-title">Quizzes Educacionais</h2>
-        <p>
-          Teste seus conhecimentos com nosso quiz interativo! Selecione seu
-          projeto e nível de dificuldade para ver seu progresso.
-        </p>
-
-        <div class="quiz">
-          <i class="bi bi-question-circle"></i>
-          <a href="https://pt.quizur.com/discover?keyword=liga%C3%A7%C3%B5es+qu%C3%ADmicas" target="_blank">Quiz sobre
-            Química - Ligações Químicas</a>
-          <!-- + -->
-        </div>
-        <div class="quiz">
-          <i class="bi bi-question-circle"></i>
-          <a href="https://pt.quizur.com/" target="_blank">Questões Gerais</a>
-        </div>
-      </section>
+            <section id="pdfs" class="material-section">
+              <h2 class="section-title">PDFs Educacionais</h2>
+              <% for (const nivel in pdfs) { %>
+                <div class="nivel" id="nivel-<%= nivel %>">
+                  <h3 class="nivel-title">
+                    <%= nivel.charAt(0).toUpperCase() + nivel.slice(1) %>
+                  </h3>
+                  <ul class="pdf-list">
+                    <% pdfs[nivel].forEach(pdf=> { %>
+                      <li>
+                        <a href="<%= pdf.link %>" target="_blank">
+                          <%= pdf.nome %>
+                        </a>
+                      </li>
+                      <% }) %>
+                  </ul>
+                </div>
+                <% } %>
+            </section>
     </main>
 
     <%- include('components/footer') %>
-
       <script src="/js/main.js"></script>
 </body>
 

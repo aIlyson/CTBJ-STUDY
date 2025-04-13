@@ -1,24 +1,28 @@
 @import url("/css/styles.css");
 
+p {
+    line-height: 1.6;
+}
+
 /* hero */
 .hero {
+    position: relative;
     width: 100%;
-    height: 600px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 }
 
 .diagonal-hero-bg {
+    background: #6b63ff;
+    background: -webkit-linear-gradient(to right, #6b63ff, #857ff8);
+    background: linear-gradient(to right, #6b63ff, #857ff8);
     width: 100%;
     height: 600px;
     position: absolute;
     top: 0;
     left: 0;
-    background: #6b63ff;
-    background: -webkit-linear-gradient(to right, #6b63ff, #857ff8);
-    background: linear-gradient(to right, #6b63ff, #857ff8);
     z-index: -1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
@@ -139,10 +143,13 @@
     margin-top: 50px;
     padding: 50px 20px;
     z-index: 1;
+    flex-direction: row;
+    /* padrão desktop */
+    flex-wrap: wrap;
 }
 
 .intro-text {
-    max-width: 700px;
+    max-width: 800px;
     margin-right: 20px;
 }
 
@@ -160,7 +167,8 @@
 
 .intro-image img {
     max-width: 100%;
-    max-height: 350px;
+    height: auto;
+    max-height: 300px;
     border-radius: 10px;
 }
 
@@ -173,16 +181,12 @@
     padding: 40px 20px;
 }
 
-.about-system p {
-    font-size: 1.3rem;
-}
-
 /* tabs */
 .tabs {
     background-color: var(--light-gray);
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 40px 20px;
 }
 
@@ -196,7 +200,7 @@
 .tab-title {
     background-color: transparent;
     color: #2d3f53;
-    font-size: 1.5rem;
+    font-size: 1.271875rem;
     font-weight: bold;
     padding: 10px 20px;
     cursor: pointer;
@@ -319,23 +323,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.difficulty-levels h2 {
-    color: var(--roxo);
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.difficulty-levels p {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 30px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .level-buttons {
     display: flex;
     justify-content: center;
@@ -370,14 +357,6 @@
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.latest-tips h2 {
-    color: var(--roxo);
-    margin-bottom: 30px;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
 .tip-cards {
@@ -423,4 +402,77 @@
     color: #666;
     line-height: 1.5;
     margin-bottom: 0;
+}
+
+
+@media (max-width: 864px) {
+    .intro-content {
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .intro-text {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    .intro-text p {
+        font-size: 1.1rem;
+    }
+
+    .intro-image img {
+        max-height: 250px;
+    }
+
+    .about-system {
+        width: 80%;
+        padding: 30px 15px;
+    }
+
+    .tabs {
+        padding: 20px 10px;
+    }
+
+    .tab-title {
+        font-size: 1.1rem;
+    }
+
+    .tab-image {
+        display: none;
+    }
+
+    .tab-summary .btn {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 1.7rem;
+    }
+
+    .intro-text p {
+        font-size: 0.95rem;
+    }
+
+    .intro-image img {
+        max-height: 180px;
+    }
+
+    .about-system {
+        width: 90%;
+        padding: 25px 10px;
+    }
+
+    .about-system h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-system p {
+        font-size: 0.95rem;
+    }
 }

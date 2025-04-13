@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
-    <link rel="stylesheet" href="/css/index.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <%- include('components/nav') %>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+
+<body>
+  <%- include('components/nav') %>
 
     <main>
       <section class="hero">
@@ -44,7 +44,7 @@
         </div>
       </section>
 
-      <!-- sobre o sistema -->
+      <!-- sistema -->
       <section class="about-system">
         <h2>Sobre o Sistema</h2>
         <p>
@@ -55,7 +55,7 @@
         </p>
       </section>
 
-      <!-- tabs funcionalidades -->
+      <!-- tabs -->
       <section class="features">
         <div class="tabs">
           <ul class="tab-titles">
@@ -74,12 +74,12 @@
                   <li>Conteúdos organizados por disciplina.</li>
                   <li>Acesso rápido aos materiais.</li>
                 </ul>
-                <a href="/livros" class="btn button-perspective"
-                  >Comece a Estudar</a
-                >
+                <a href="/livros" class="btn button-perspective">Comece a Estudar</a>
               </div>
               <div class="tab-image">
-                <img src="/images/ufpi.jpg" alt="Livros Didáticos" />
+                <img
+                  src="https://res.cloudinary.com/dh62lwu8v/image/upload/v1744569134/natureza-morta-de-livros-versus-tecnologia_23-2150063081_f4lyde.jpg"
+                  alt="Livros Didáticos" />
               </div>
             </div>
 
@@ -90,12 +90,12 @@
                   <li>Links úteis e PDFs complementares.</li>
                   <li>Conteúdo adicional para aprofundamento.</li>
                 </ul>
-                <a href="/materiais" class="btn button-perspective"
-                  >Comece a Estudar</a
-                >
+                <a href="/materiais" class="btn button-perspective">Comece a Estudar</a>
               </div>
               <div class="tab-image">
-                <img src="/images/ufpi.jpg" alt="Livros Didáticos" />
+                <img
+                  src="https://res.cloudinary.com/dh62lwu8v/image/upload/v1744569210/horas-complementares-com-certificado_eqvev0.jpg"
+                  alt="Livros Didáticos" />
               </div>
             </div>
 
@@ -106,19 +106,18 @@
                   <li>Dicas de estudo e fórmulas essenciais.</li>
                   <li>Materiais extras para estudo avançado.</li>
                 </ul>
-                <a href="/Resumos" class="btn button-perspective"
-                  >Comece a Estudar</a
-                >
+                <a href="/Resumos" class="btn button-perspective">Comece a Estudar</a>
               </div>
               <div class="tab-image">
-                <img src="/images/ufpi.jpg" alt="Livros Didáticos" />
+                <img src="https://res.cloudinary.com/dh62lwu8v/image/upload/v1744569305/Curso-online_z1pve7.webp"
+                  alt="Livros Didáticos" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- nivel de dificuldade -->
+      <!-- níveis -->
       <section class="difficulty-levels">
         <h2>Filtros por Nível de Dificuldade</h2>
         <p>
@@ -129,14 +128,12 @@
         </p>
         <div class="level-buttons">
           <a href="/materiais#nivel-basico" class="btn level-btn">Básico</a>
-          <a href="/materiais#nivel-intermediario" class="btn level-btn"
-            >Intermediário</a
-          >
+          <a href="/materiais#nivel-intermediario" class="btn level-btn">Intermediário</a>
           <a href="/materais#nivel-avancado" class="btn level-btn">Avançado</a>
         </div>
       </section>
 
-      <!-- ultimas dicas -->
+      <!-- dicas -->
       <section class="latest-tips">
         <h2>Últimas Dicas</h2>
         <div class="tip-cards">
@@ -174,6 +171,7 @@
 
     <%- include('components/footer') %>
 
-    <script src="/js/main.js"></script>
-  </body>
+      <script src="/js/main.js"></script>
+</body>
+
 </html>

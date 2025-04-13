@@ -30,6 +30,9 @@ jspm_packages/
 # dotenv environment variables file
 .env
 
+# Test results
+test/
+
 # IDE-specific files
 .vscode/
 .idea/

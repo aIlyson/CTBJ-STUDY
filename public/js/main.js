@@ -23,3 +23,44 @@ tabs.forEach((tab) => {
     }
   });
 });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+const menuLinks = document.querySelectorAll(".menu a");
+
+menuToggle?.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  menu?.classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
+});
+
+dropdownToggles.forEach((toggle) => {
+  toggle.addEventListener("click", (e) => {
+    if (window.innerWidth <= 992) {
+      e.preventDefault();
+      const dropdown = toggle.parentElement;
+      dropdown?.classList.toggle("active");
+
+      dropdownToggles.forEach((otherToggle) => {
+        if (otherToggle !== toggle) {
+          otherToggle.parentElement?.classList.remove("active");
+        }
+      });
+    }
+  });
+});
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth <= 992) {
+      menu?.classList.remove("active");
+      menuToggle?.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
+  });
+});
+
+const style = document.createElement("style");
+style.textContent = ".no-scroll { overflow: hidden; }";
+document.head.appendChild(style);

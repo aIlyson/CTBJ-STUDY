@@ -52,3 +52,47 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        margin-top: 20px;
+        padding-bottom: 8px;
+    }
+
+    .section-description {
+        font-size: 16px;
+    }
+
+    .formula-list li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        border-bottom: 2px solid #6c63ff;
+    }
+
+    .section-description {
+        font-size: 15px;
+    }
+
+    .formula-list li {
+        font-size: 16px;
+    }
+
+    .formula-list li:hover {
+        padding: 4px;
+    }
+}
